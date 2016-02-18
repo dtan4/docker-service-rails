@@ -15,4 +15,5 @@ COPY . /app
 
 EXPOSE 3000
 
+ENTRYPOINT ["/app/script/entrypoint.sh"]
 CMD ["bin/rails", "s"]
