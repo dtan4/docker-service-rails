@@ -45,3 +45,5 @@ end
 
 # Use rails_stgout_logging to configure your app to log to standard out
 gem 'rails_12factor'
+
+gem 'nokogiri', '~> 1.6.8.rc3'
