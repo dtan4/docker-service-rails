@@ -1,12 +1,14 @@
-db:
-  image: postgres:9.4
-web:
-  build: .
-  command: bin/rails s -p 8080 -b '0.0.0.0'
-  environment:
-    - RAILS_ENV=production
-    - DATABASE_HOST=db
-    - DATABASE_PORT=5432
-    - DATABASE_USER=postgres
-  ports:
-    - "8080:8080"
+version: '2'
+services:
+  db:
+    image: postgres:9.4
+  web:
+    build: .
+    command: bin/rails s -p 8080 -b '0.0.0.0'
+    environment:
+      - RAILS_ENV=production
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+    ports:
+      - "8080:8080"
