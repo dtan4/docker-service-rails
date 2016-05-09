@@ -13,6 +13,8 @@ RUN bundle install -j4 --without development test
 
 COPY . /app
 
+RUN bundle exec rake assets:precompile
+
 EXPOSE 3000
 
 ENTRYPOINT ["/app/script/entrypoint.sh"]
